@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivities.Orders.MyOrderActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/serviceProvider_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:id="@+id/item_name_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:text="@string/my_oder"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/back_img"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/back"
+                android:scaleType="fitXY"
+                tools:ignore="RtlCompat" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.design.widget.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tab_layout"
+        app:layout_constraintTop_toBottomOf="@id/app_bar"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="@color/bgreen"
+        app:tabRippleColor="#567"
+        app:tabIndicatorColor="@color/bgreen"
+        android:scrollbarSize="200dp"
+        app:tabTextColor="#c4c4c1"
+        />
+
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@id/app_bar"
+        app:layout_constraintEnd_toEndOf="@id/app_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout"
+        android:id="@+id/view_pager"/>
+
+</android.support.constraint.ConstraintLayout>

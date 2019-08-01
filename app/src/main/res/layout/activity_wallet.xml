@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivities.Profile.WalletActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@+id/main_page_toolbar"
+            layout="@layout/app_bar_layout">
+        </include>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <TextView
+        android:id="@+id/wallet_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="1200 $"
+        android:textSize="40dp"
+        android:textColorHint="@color/green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        android:layout_marginTop="70dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/balance"
+        android:textSize="22sp"
+        android:textColor="@color/green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wallet_value"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/recharge_wallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="270dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/recharge_wallet"
+        android:textAllCaps="false"
+        android:textColor="#fff"/>
+
+</android.support.constraint.ConstraintLayout>

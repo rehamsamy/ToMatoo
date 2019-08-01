@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main.CategoriesItems.DoneOrderActivity"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/splash_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:id="@+id/splash"
+        />
+
+    <TextView
+        android:id="@+id/sucess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="15dp"
+        android:drawableStart="@drawable/success_order"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/splash"
+        android:padding="20dp"
+        android:text="@string/sucess"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        />
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/sucess"
+        app:layout_constraintEnd_toEndOf="@id/sucess"
+        app:layout_constraintTop_toBottomOf="@+id/sucess"
+        android:id="@+id/sucess_value_txtV"
+        android:text="@string/sucess_value"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sucess_value_txtV"
+        android:background="@drawable/buttons"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="40dp"
+        android:textAllCaps="false"
+        android:text="@string/track_order"
+        android:id="@+id/track_order_btn"
+        />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/track_order_btn"
+        app:layout_constraintEnd_toEndOf="@id/track_order_btn"
+        app:layout_constraintTop_toBottomOf="@id/track_order_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/buttons"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:text="@string/back_to_shop"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/back_to_shop_btn"
+        />
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

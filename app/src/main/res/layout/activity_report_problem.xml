@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MenuActivities.Orders.CancelOrderActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/serviceProvider_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:id="@+id/item_name_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:text="@string/report_problem"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/back_img"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/back"
+                android:scaleType="fitXY"
+                tools:ignore="RtlCompat" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/app_bar"
+        app:layout_constraintTop_toBottomOf="@id/app_bar"
+        android:text="@string/report_problem_about"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:id="@+id/report_problem_about"
+        />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/report_problem_about_input"
+        app:layout_constraintStart_toStartOf="@id/report_problem_about"
+        app:layout_constraintTop_toBottomOf="@id/report_problem_about"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/reason_of_cancell_value"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.button.MaterialButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/report_problem_about_input"
+        app:layout_constraintEnd_toEndOf="@id/report_problem_about_input"
+        app:layout_constraintTop_toBottomOf="@id/report_problem_about_input"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/report"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/buttons"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/report_problem_btn"
+        />
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogainAndRegistration.LoginActivity"
+    android:background="@drawable/login_bg">
+<GridLayout
+    android:id="@+id/line"
+    android:layout_width="10dp"
+    android:layout_height="10dp">
+</GridLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/login_logo"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line" />
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/username"
+        android:inputType="textEmailAddress"
+        android:drawableStart="@drawable/login_name"
+        android:drawablePadding="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="50dp"
+        android:elevation="5dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        android:drawableLeft="@drawable/login_name">
+    </android.support.design.widget.TextInputEditText>
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:drawableStart="@drawable/login_password"
+        android:drawablePadding="20dp"
+        android:layout_marginTop="15dp"
+        android:inputType="text"
+        android:password="true"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        android:layout_marginStart="50dp"
+        tools:ignore="MissingConstraints"
+        android:layout_marginEnd="50dp"
+        android:drawableLeft="@drawable/login_password">
+    </android.support.design.widget.TextInputEditText>
+
+    <Button
+        android:id="@+id/signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:text="@string/signin"
+        android:textColor="#ffff"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:background="@drawable/buttons"/>
+
+    <TextView
+        android:id="@+id/forget_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/signin"
+        android:text="@string/forgetpassword"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="18dp"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/dont_have_an_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/forget_password"
+        android:text="@string/do_not_have_account"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:paddingStart="80dp"
+        android:paddingLeft="20dp" />
+
+    <TextView
+        android:id="@+id/signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="65dp"
+        android:layout_marginRight="40dp"
+        android:text="@string/signup"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/forget_password"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/bgreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/continue_without_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/dont_have_an_account"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:textSize="16sp"
+        android:textColor="#ffff"
+        android:text="@string/continue_without_login"
+        android:textAllCaps="false"
+        android:background="@drawable/buttons"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/view_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#be0e37"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/delete_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/remove_item" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/delete_icon"
+            android:text="@string/delete"
+            android:textColor="#fff"
+            android:textSize="13dp" />
+
+    </RelativeLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_white"
+        android:id="@+id/view_foreground"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:padding="10dp">
+
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/item_mango"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/plus_img"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/wishlist_select1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:layout_constraintEnd_toStartOf="@id/plus_img"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/cart_not_select1"
+            android:layout_marginEnd="10dp"/>
+
+
+        <android.support.v7.widget.AppCompatRatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/plus_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/Base.Widget.AppCompat.RatingBar.Small"
+            android:rating="4"
+            android:numStars="5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+
+
+        <TextView
+            android:id="@+id/item_type_txtV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/item_type"
+            app:layout_constraintStart_toEndOf="@id/item_image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_name_txtV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/item_name"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/item_type_txtV"
+            app:layout_constraintTop_toBottomOf="@id/item_type_txtV" />
+
+        <TextView
+            android:id="@+id/item_price_txtV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/item_price"
+            android:textColor="@color/bgreen"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/item_type_txtV"
+            app:layout_constraintTop_toBottomOf="@id/item_name_txtV" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_price_currency"
+            android:text="@string/item_price_curr"
+            android:textColor="@color/bgreen"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/item_price_txtV"
+            app:layout_constraintTop_toBottomOf="@id/item_name_txtV"
+            android:layout_marginTop="15dp" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</FrameLayout>

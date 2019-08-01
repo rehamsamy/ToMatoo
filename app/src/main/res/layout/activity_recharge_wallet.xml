@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivities.Profile.RechargeWalletActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@+id/main_page_toolbar"
+            layout="@layout/app_bar_layout">
+        </include>
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:id="@+id/recharge_wallet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recharge_by"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="50dp"
+        android:textSize="17sp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="20dp" />
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/credit_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/recharge_wallet"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="@string/credit_card"
+
+        android:drawableStart="@drawable/wallet"
+        android:drawablePadding="10dp"
+        android:layout_marginStart="30dp"
+        android:inputType="text"
+        android:layout_marginEnd="30dp"
+        android:drawableLeft="@drawable/wallet" />
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/amount"
+        app:layout_constraintTop_toBottomOf="@+id/credit_card"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:textSize="17sp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="20dp" />
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/amount_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/amount"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="1000"
+        android:drawableStart="@drawable/wallet"
+        android:drawablePadding="20dp"
+        android:layout_marginStart="30dp"
+        android:inputType="text"
+        android:layout_marginEnd="120dp"
+        android:drawableLeft="@drawable/wallet"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="120dp" />
+
+    <TextView
+        android:id="@+id/usa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="USA $"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/amount"
+        app:layout_constraintStart_toEndOf="@+id/amount_value"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:textSize="27sp"
+        android:textColor="@color/green"
+        android:layout_marginRight="20dp" />
+
+    <Button
+        android:id="@+id/recharge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="220dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/recharge"
+        android:textAllCaps="false"
+        android:textColor="#fff"/>
+
+</android.support.constraint.ConstraintLayout>

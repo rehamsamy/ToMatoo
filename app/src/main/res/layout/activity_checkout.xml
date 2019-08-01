@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main.CategoriesItems.CheckoutActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/serviceProvider_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:id="@+id/item_name_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:text="@string/checkout"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/back_img"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/back"
+                android:scaleType="fitXY"
+                tools:ignore="RtlCompat" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/first_name_input"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/login_name"
+            android:drawablePadding="15dp"
+            android:hint="@string/first_name"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="@id/first_name_input"
+        app:layout_constraintEnd_toEndOf="@id/first_name_input"
+        app:layout_constraintTop_toBottomOf="@id/first_name_input"
+        android:id="@+id/last_name_input"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/login_name"
+            android:hint="@string/last_name"
+            android:drawablePadding="15dp"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="@id/first_name_input"
+        app:layout_constraintEnd_toEndOf="@id/first_name_input"
+        app:layout_constraintTop_toBottomOf="@id/last_name_input"
+        android:layout_marginTop="8dp"
+        android:id="@+id/phone_input"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/phone_example"
+            android:drawableStart="@drawable/signup_phone"
+            android:drawablePadding="15dp"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/first_name_input"
+        app:layout_constraintEnd_toEndOf="@id/first_name_input"
+        app:layout_constraintTop_toBottomOf="@+id/phone_input"
+        android:background="@drawable/border"
+        android:layout_marginTop="40dp"
+        android:id="@+id/frame_root"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="@string/delivery_address"
+            android:layout_marginBottom="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="10dp"
+            android:text="@string/location_example"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/side_arrow"
+            android:layout_gravity="end|center_vertical"
+            android:id="@+id/side_arrow_img"/>
+
+    </FrameLayout>
+
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="@id/first_name_input"
+        app:layout_constraintEnd_toEndOf="@id/first_name_input"
+        app:layout_constraintTop_toBottomOf="@id/frame_root"
+        app:layout_constraintBottom_toTopOf="@+id/confirm_data_btn"
+        android:id="@+id/notes_input"
+        android:layout_marginTop="50dp"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/body_message"
+            android:hint="@string/notes"
+            android:drawablePadding="15dp"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/first_name_input"
+        app:layout_constraintEnd_toEndOf="@id/first_name_input"
+        app:layout_constraintTop_toBottomOf="@id/notes_input"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/buttons"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:text="@string/confirm_data"
+        android:id="@+id/confirm_data_btn"
+        />
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

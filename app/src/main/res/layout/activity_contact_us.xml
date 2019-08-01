@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MenuActivities.Communications.ContactUsActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/serviceProvider_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:id="@+id/item_name_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:text="@string/contact_us"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/share_img"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/nav_share"
+                android:layout_marginRight="10dp"
+                android:scaleType="fitXY"
+                tools:ignore="RtlCompat" />
+
+
+            <ImageView
+                android:id="@+id/back_img"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/back"
+                android:scaleType="fitXY"
+                tools:ignore="RtlCompat" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar"
+        android:src="@drawable/splash_logo"
+        android:id="@+id/splash_logo"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/splash_logo"
+        android:orientation="horizontal"
+        android:id="@+id/linear_root"
+        android:layout_marginTop="20dp">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/twitter_icon"
+        android:id="@+id/twitter_icon"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/facebook_icon"
+        android:id="@+id/facebook_icon"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/instagram_icon"
+        android:layout_marginStart="20dp"
+        android:id="@+id/instagram_icon"
+        />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phone"
+        android:drawableStart="@drawable/contact_phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_root"
+        android:layout_marginStart="20dp"
+        android:drawablePadding="15dp"
+        android:id="@+id/phone"
+        android:textSize="18sp"
+        android:textColor="@color/bgray"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/address"
+        android:drawableStart="@drawable/contact_address"
+        app:layout_constraintStart_toStartOf="@id/phone"
+        app:layout_constraintTop_toBottomOf="@id/phone"
+        android:drawablePadding="15dp"
+        android:id="@+id/address"
+        android:textSize="18sp"
+        android:textColor="@color/bgray"
+        android:textStyle="bold"/>
+
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/website"
+        android:drawableStart="@drawable/contact_web"
+        app:layout_constraintStart_toStartOf="@id/phone"
+        app:layout_constraintTop_toBottomOf="@id/address"
+        android:drawablePadding="15dp"
+        android:id="@+id/website"
+        android:textSize="18sp"
+        android:textColor="@color/bgray"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:drawableStart="@drawable/contact_email"
+        app:layout_constraintStart_toStartOf="@id/phone"
+        app:layout_constraintTop_toBottomOf="@id/website"
+        android:drawablePadding="15dp"
+        android:id="@+id/email"
+        android:textSize="18sp"
+        android:textColor="@color/bgray"
+        android:textStyle="bold"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:text="@string/phone_example"
+        android:id="@+id/phone_value_txtV"
+        app:layout_constraintStart_toEndOf="@id/phone"
+        app:layout_constraintTop_toTopOf="@id/phone"
+        android:layout_marginStart="18dp"
+        android:textSize="18sp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delivery_address_value"
+        android:id="@+id/address_value_txtV"
+        app:layout_constraintStart_toEndOf="@id/address"
+        app:layout_constraintTop_toTopOf="@id/address"
+        android:layout_marginStart="18dp"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/website_value"
+        android:id="@+id/website_value_txtV"
+        app:layout_constraintStart_toEndOf="@id/website"
+        app:layout_constraintTop_toTopOf="@id/website"
+        android:layout_marginStart="18dp"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email_value"
+        android:id="@+id/email_value_txtV"
+        app:layout_constraintStart_toEndOf="@id/email"
+        app:layout_constraintTop_toTopOf="@id/email"
+        android:layout_marginStart="18dp"
+        android:textSize="18sp"/>
+
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/report_problem_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/buttons"
+        android:text="@string/report_problem"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        app:layout_constraintBottom_toTopOf="@+id/send_suggestion_btn"/>
+
+    <android.support.design.button.MaterialButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/report_problem_btn"
+        app:layout_constraintEnd_toEndOf="@id/report_problem_btn"
+        app:layout_constraintTop_toBottomOf="@id/report_problem_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/send_suggestion"
+        android:id="@+id/send_suggestion_btn"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/buttons"
+        />
+
+
+
+
+</android.support.constraint.ConstraintLayout>

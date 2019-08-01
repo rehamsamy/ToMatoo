@@ -1,0 +1,101 @@
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivities.Profile.EditProfileActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@+id/main_page_toolbar"
+            layout="@layout/app_bar_layout">
+        </include>
+    </android.support.design.widget.AppBarLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/signup_user_pic"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/add_pic"
+        android:layout_marginTop="106dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="John Doe"
+        android:inputType="text"
+        android:drawableStart="@drawable/login_name"
+        android:drawablePadding="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="50dp"
+        android:elevation="5dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintTop_toBottomOf="@id/image1"
+        android:drawableLeft="@drawable/login_name">
+    </android.support.design.widget.TextInputEditText>
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="username@gmail.com"
+        android:drawableStart="@drawable/signup_email"
+        android:drawablePadding="20dp"
+        android:layout_marginTop="20dp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@id/username"
+        android:layout_marginStart="50dp"
+        tools:ignore="MissingConstraints"
+        android:layout_marginEnd="50dp"
+        android:drawableLeft="@drawable/login_password">
+    </android.support.design.widget.TextInputEditText>
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="0123456789"
+        android:drawableStart="@drawable/contact_phone"
+        android:drawablePadding="16dp"
+        android:layout_marginTop="20dp"
+        android:inputType="phone"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        android:layout_marginStart="50dp"
+        tools:ignore="MissingConstraints"
+        android:layout_marginEnd="50dp"
+        android:drawableLeft="@drawable/signup_email">
+    </android.support.design.widget.TextInputEditText>
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/phone"
+        android:layout_marginTop="37dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:text="@string/save"
+        android:textColor="#ffff"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:background="@drawable/buttons"/>
+
+</android.support.constraint.ConstraintLayout>

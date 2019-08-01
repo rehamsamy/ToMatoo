@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/sidemenu_profile"
+            android:title="@string/profil" />
+        <item
+            android:id="@+id/nav_cart"
+            android:icon="@drawable/sidemenu_cart"
+            android:title="@string/cart" />
+        <item
+            android:id="@+id/nav_wishlist"
+            android:icon="@drawable/sidemenu_wishlist"
+            android:title="@string/wishlist" />
+        <item
+            android:id="@+id/nav_comparelist"
+            android:icon="@drawable/sidemenu_reviews"
+            android:title="@string/comaprelist" />
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/sidemenu_order"
+            android:title="@string/orders" />
+        <item
+            android:id="@+id/nav_notification"
+            android:icon="@drawable/sidemenu_notification"
+            android:title="@string/notification" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/sidemenu_setting"
+            android:title="@string/setting" />
+    </group>
+
+    <item tools:ignore="MenuTitle">
+        <menu>
+            <item
+                android:id="@+id/nav_aboutapp"
+                android:icon="@drawable/sidemenu_help"
+                android:title="@string/about_app">
+            </item>
+            <item
+                android:id="@+id/nav_how_to_use"
+                android:icon="@drawable/sidemenu_howtouse"
+                android:title="@string/how_to_use">
+            </item>
+            <item
+                android:id="@+id/nav_contact_us"
+                android:icon="@drawable/sidemenu_contact"
+                android:title="@string/contact_us">
+            </item>
+
+
+        </menu>
+    </item>
+
+</menu>
