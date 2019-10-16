@@ -15,7 +15,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,8 +25,6 @@
         android:id="@+id/order_number_txtV"
         android:textColor="@color/black"
         android:textSize="14sp"/>
-
-
 
     <TextView
         android:layout_width="wrap_content"
@@ -64,10 +61,6 @@
         android:text="@string/return_order"
         android:id="@+id/return_order_btn"
         android:layout_marginTop="15dp"/>
-
-
-
-
 
     <TextView
         android:layout_width="wrap_content"

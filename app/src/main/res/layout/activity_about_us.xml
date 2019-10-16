@@ -4,64 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
     tools:context=".MenuActivities.Communications.AboutUsActivity">
 
 
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/app_bar"
+        android:id="@+id/aboutUs_app_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/green"
+        android:theme="@style/AppTheme.AppBarOverlay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/serviceProvider_toolbar"
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@android:color/transparent">
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
 
             <TextView
-                android:id="@+id/item_name_toolbar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:text="@string/about_us"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:layout_gravity="center"
+                android:text="@string/about_Us"
+                android:textColor="@android:color/white"
+                android:textSize="23sp" />
 
-
-            <ImageView
-                android:id="@+id/back_img"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+            <TextView
+                android:id="@+id/aboutUs_back_txtV_id"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
                 android:layout_gravity="left|center_vertical"
-                android:layout_marginStart="8dp"
-                android:background="@drawable/back"
-                android:scaleType="fitXY"
-                tools:ignore="RtlCompat" />
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/ic_arrow_back_black_24dp" />
         </android.support.v7.widget.Toolbar>
+
     </android.support.design.widget.AppBarLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/write_details_app"
-        android:layout_marginTop="20dp"
-        android:textStyle="bold"
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/app_bar"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:textColor="@color/black"
-        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/aboutUs_app_bar_layout">
 
-        />
-
-
-
-
-
+        <TextView
+            android:id="@+id/about_txtV_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="17sp" />
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

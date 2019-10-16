@@ -6,7 +6,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_profile"
-            android:icon="@drawable/sidemenu_profile"
+            android:icon="@drawable/ic_person_black_24dp"
             android:title="@string/profil" />
         <item
             android:id="@+id/nav_cart"
@@ -14,7 +14,7 @@
             android:title="@string/cart" />
         <item
             android:id="@+id/nav_wishlist"
-            android:icon="@drawable/sidemenu_wishlist"
+            android:icon="@drawable/ic_favorite_black_24dp"
             android:title="@string/wishlist" />
         <item
             android:id="@+id/nav_comparelist"
@@ -22,38 +22,27 @@
             android:title="@string/comaprelist" />
         <item
             android:id="@+id/nav_orders"
-            android:icon="@drawable/sidemenu_order"
+            android:icon="@drawable/ic_shopping_basket_black_24dp"
             android:title="@string/orders" />
         <item
             android:id="@+id/nav_notification"
-            android:icon="@drawable/sidemenu_notification"
+            android:icon="@drawable/ic_notifications_black_24dp"
             android:title="@string/notification" />
         <item
             android:id="@+id/nav_setting"
-            android:icon="@drawable/sidemenu_setting"
+            android:icon="@drawable/ic_settings_black_24dp"
             android:title="@string/setting" />
+        <item
+            android:id="@+id/nav_aboutapp"
+            android:icon="@drawable/ic_help_black_24dp"
+            android:title="@string/about_app" />
+        <item
+            android:id="@+id/nav_how_to_use"
+            android:icon="@drawable/ic_error_black_24dp"
+            android:title="@string/how_to_use" />
+        <item
+            android:id="@+id/nav_contact_us"
+            android:icon="@drawable/ic_phone_black_24dp"
+            android:title="@string/contact_us" />
     </group>
-
-    <item tools:ignore="MenuTitle">
-        <menu>
-            <item
-                android:id="@+id/nav_aboutapp"
-                android:icon="@drawable/sidemenu_help"
-                android:title="@string/about_app">
-            </item>
-            <item
-                android:id="@+id/nav_how_to_use"
-                android:icon="@drawable/sidemenu_howtouse"
-                android:title="@string/how_to_use">
-            </item>
-            <item
-                android:id="@+id/nav_contact_us"
-                android:icon="@drawable/sidemenu_contact"
-                android:title="@string/contact_us">
-            </item>
-
-
-        </menu>
-    </item>
-
 </menu>

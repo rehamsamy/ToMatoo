@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuActivities.Communications.HowToUseActivity">
+    tools:context="com.tomatoo.MenuActivities.Communications.HowToUseActivity">
 
 
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/app_bar"
+        android:id="@+id/howToUser_appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/green"
@@ -35,68 +35,34 @@
 
             <ImageView
                 android:id="@+id/back_img"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
                 android:layout_gravity="left|center_vertical"
                 android:layout_marginStart="8dp"
-                android:background="@drawable/back"
-                android:scaleType="fitXY"
-                tools:ignore="RtlCompat" />
+                android:background="@drawable/ic_arrow_back_black_24dp"
+                android:scaleType="fitXY" />
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:text="@string/steps_of_app"
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/app_bar"
-        android:id="@+id/step"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
-        />
+        app:layout_constraintTop_toBottomOf="@id/howToUser_appBar">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:text="@string/step1"
-        android:id="@+id/step1"
-        app:layout_constraintStart_toStartOf="@id/step"
-        app:layout_constraintTop_toBottomOf="@id/step"
-        android:layout_marginTop="15dp"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@id/step"
-        app:layout_constraintTop_toBottomOf="@id/step1"
-        android:textStyle="bold"
-        android:text="@string/step2"
-        android:layout_marginTop="10dp"
-        android:id="@+id/step2"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@id/step"
-        app:layout_constraintTop_toBottomOf="@id/step2"
-        android:textStyle="bold"
-        android:text="@string/step3"
-        android:layout_marginTop="10dp"
-        />
-
-
+        <TextView
+            android:id="@+id/howToUse_txtV_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/steps_of_app"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

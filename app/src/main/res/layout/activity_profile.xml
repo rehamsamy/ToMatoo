@@ -4,300 +4,602 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
     tools:context=".MenuActivities.Profile.ProfileActivity">
 
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/appBarLayout"
+        android:id="@+id/profile_appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <include
-            android:id="@+id/main_page_toolbar"
-            layout="@layout/app_bar_layout">
-        </include>
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/profile"
+                android:textColor="@android:color/white"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/profile_back_txtV_id"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/ic_arrow_back_black_24dp" />
+        </android.support.v7.widget.Toolbar>
+
     </android.support.design.widget.AppBarLayout>
 
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/profile_user_pic"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="70dp"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!--<TextView-->
+    <!--android:id="@+id/username"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="14dp"-->
+    <!--android:text="User Name"-->
+    <!--android:textSize="19sp"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/image" />-->
 
-    <TextView
-        android:id="@+id/username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="User Name"
-        app:layout_constraintTop_toBottomOf="@+id/image"
-        android:layout_marginTop="14dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:textSize="19sp"/>
+    <!--<TextView-->
+    <!--android:id="@+id/phone"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="4dp"-->
+    <!--android:text="0123456789"-->
+    <!--android:textSize="19sp"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/username" />-->
 
-    <TextView
-        android:id="@+id/phone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0123456789"
-        app:layout_constraintTop_toBottomOf="@+id/username"
-        android:layout_marginTop="4dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:textSize="19sp"/>
+    <!--<TextView-->
+    <!--android:id="@+id/email"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="4dp"-->
+    <!--android:text="email@gmail.com"-->
+    <!--android:textSize="19sp"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/phone" />-->
 
-    <TextView
-        android:id="@+id/email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="email@gmail.com"
-        app:layout_constraintTop_toBottomOf="@+id/phone"
-        android:layout_marginTop="4dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:textSize="19sp"/>
+    <!--<ImageButton-->
+    <!--android:id="@+id/edit"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="187dp"-->
+    <!--android:layout_marginEnd="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:padding="0dp"-->
+    <!--android:src="@drawable/profile_edit"-->
+    <!--android:textSize="19sp"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent" />-->
 
-    <ImageButton
-        android:id="@+id/edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/profile_edit"
-        android:padding="0dp"
-        android:layout_marginTop="187dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginEnd="10dp"
-        android:textSize="19sp"
-        android:layout_marginRight="10dp" />
+    <!--<android.support.v7.widget.CardView-->
+    <!--android:id="@+id/card_one"-->
+    <!--android:layout_width="317dp"-->
+    <!--android:layout_height="70dp"-->
+    <!--android:layout_marginTop="25dp"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/email">-->
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_one"
-        android:layout_width="317dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="25dp"
-        app:layout_constraintStart_toStartOf="parent"
+    <!--<android.support.constraint.ConstraintLayout-->
+    <!--android:id="@+id/con1"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:paddingStart="10dp"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingTop="9dp">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/address"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:layout_marginEnd="12dp"-->
+    <!--android:layout_marginRight="12dp"-->
+    <!--android:text="@string/address"-->
+    <!--android:textSize="16sp"-->
+    <!--android:textStyle="bold"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/con1"-->
+    <!--app:layout_constraintTop_toTopOf="@id/con" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/address_detail"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginStart="0dp"-->
+    <!--android:layout_marginLeft="3dp"-->
+    <!--android:layout_marginTop="4dp"-->
+    <!--android:hint="Street, City, Country"-->
+    <!--android:textSize="17sp"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/address" />-->
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/icon_one"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="30dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginRight="8dp"-->
+    <!--android:padding="1dp"-->
+    <!--android:src="@drawable/side_arrow"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent" />-->
+    <!--</android.support.constraint.ConstraintLayout>-->
+
+    <!--</android.support.v7.widget.CardView>-->
+
+
+    <!--<android.support.v7.widget.CardView-->
+    <!--android:id="@+id/card_two"-->
+    <!--android:layout_width="317dp"-->
+    <!--android:layout_height="70dp"-->
+    <!--android:layout_marginTop="4dp"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintHorizontal_bias="0.507"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/card_one">-->
+
+    <!--<android.support.constraint.ConstraintLayout-->
+    <!--android:id="@+id/con2"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:paddingStart="10dp"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingTop="9dp">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/payment_method"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:layout_marginEnd="12dp"-->
+    <!--android:layout_marginRight="12dp"-->
+    <!--android:text="@string/payment_method"-->
+    <!--android:textSize="16sp"-->
+    <!--android:textStyle="bold"-->
+    <!--app:layout_constraintTop_toTopOf="@id/con" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/credit_card"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="3dp"-->
+    <!--android:layout_marginTop="4dp"-->
+    <!--android:hint="Credit Card"-->
+    <!--android:textSize="17sp"-->
+    <!--app:layout_constraintStart_toStartOf="@id/con2"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/payment_method" />-->
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/icon_two"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="30dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginRight="8dp"-->
+    <!--android:padding="1dp"-->
+    <!--android:src="@drawable/side_arrow"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent" />-->
+    <!--</android.support.constraint.ConstraintLayout>-->
+
+    <!--</android.support.v7.widget.CardView>-->
+
+
+    <!--<android.support.v7.widget.CardView-->
+    <!--android:id="@+id/card_three"-->
+    <!--android:layout_width="317dp"-->
+    <!--android:layout_height="70dp"-->
+    <!--android:layout_marginTop="4dp"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintHorizontal_bias="0.507"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/card_two">-->
+
+    <!--<android.support.constraint.ConstraintLayout-->
+    <!--android:id="@+id/con3"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:paddingStart="10dp"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingTop="9dp">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/password"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:layout_marginEnd="12dp"-->
+    <!--android:layout_marginRight="12dp"-->
+    <!--android:text="@string/password_2"-->
+    <!--android:textSize="16sp"-->
+    <!--android:textStyle="bold"-->
+    <!--app:layout_constraintTop_toTopOf="@id/con" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/password_shape"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="3dp"-->
+    <!--android:layout_marginTop="4dp"-->
+    <!--android:hint="************"-->
+    <!--android:textSize="17sp"-->
+    <!--app:layout_constraintStart_toStartOf="@id/con3"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/password" />-->
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/icon_three"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="30dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginRight="8dp"-->
+    <!--android:padding="1dp"-->
+    <!--android:src="@drawable/side_arrow"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent" />-->
+    <!--</android.support.constraint.ConstraintLayout>-->
+
+    <!--</android.support.v7.widget.CardView>-->
+
+    <!--<android.support.v7.widget.CardView-->
+    <!--android:id="@+id/card_four"-->
+    <!--android:layout_width="317dp"-->
+    <!--android:layout_height="70dp"-->
+    <!--android:layout_marginTop="4dp"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintHorizontal_bias="0.507"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/card_three">-->
+
+    <!--<android.support.constraint.ConstraintLayout-->
+    <!--android:id="@+id/con4"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:paddingStart="10dp"-->
+    <!--android:paddingLeft="10dp"-->
+
+    <!--android:paddingTop="9dp">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/waleet"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:layout_marginEnd="12dp"-->
+    <!--android:layout_marginRight="12dp"-->
+    <!--android:text="@string/wallet"-->
+    <!--android:textSize="16sp"-->
+    <!--android:textStyle="bold"-->
+    <!--app:layout_constraintTop_toTopOf="@id/con" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/amount"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="3dp"-->
+    <!--android:layout_marginTop="4dp"-->
+    <!--android:hint="12000$"-->
+    <!--android:textSize="17sp"-->
+    <!--app:layout_constraintStart_toStartOf="@id/con4"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/waleet" />-->
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/icon_four"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="30dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginRight="8dp"-->
+    <!--android:padding="1dp"-->
+    <!--android:src="@drawable/side_arrow"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent" />-->
+    <!--</android.support.constraint.ConstraintLayout>-->
+
+    <!--</android.support.v7.widget.CardView>-->
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/profile_data_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_appBarLayout">
+
+        <ImageView
+            android:id="@+id/profile_user_img_id"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/profile_user_pic"
+            app:layout_constraintEnd_toEndOf="@id/profile_data_layout"
+            app:layout_constraintStart_toStartOf="@id/profile_data_layout"
+            app:layout_constraintTop_toTopOf="@id/profile_data_layout" />
+
+        <TextView
+            android:id="@+id/profile_name_txtV_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_user_img_id" />
+
+        <TextView
+            android:id="@+id/profile_phone_txtV_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_name_txtV_id" />
+
+        <TextView
+            android:id="@+id/profile_email_txtV_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_phone_txtV_id" />
+
+        <ImageView
+            android:id="@+id/profile_edit_btn_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/profile_edit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_name_txtV_id" />
 
         <android.support.constraint.ConstraintLayout
-            android:id="@+id/con1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="9dp"
-            android:paddingStart="10dp"
-            android:paddingLeft="10dp">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/profile_card_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_email_txtV_id">
 
-            <TextView
-                android:id="@+id/address"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/address"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="@id/con"
-                android:layout_marginTop="10dp"
-                app:layout_constraintTop_toBottomOf="@+id/con1"
-                android:layout_marginEnd="12dp"
-                android:layout_marginRight="12dp" />
-
-            <TextView
-                android:id="@+id/address_detail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:hint="Street, City, Country"
-                android:textSize="17sp"
+            <RelativeLayout
+                android:id="@+id/profile_address_layout_id"
+                android:layout_width="0dp"
+                android:layout_height="77dp"
+                android:padding="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="0dp"
-                android:layout_marginLeft="3dp"
-                app:layout_constraintTop_toBottomOf="@+id/address" />
+                app:layout_constraintTop_toTopOf="parent">
 
-            <ImageButton
-                android:id="@+id/icon_one"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="30dp"
-                android:padding="1dp"
-                android:src="@drawable/side_arrow"
+                <TextView
+                    android:id="@+id/address_txtV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/prof_address"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/address_val_txtV_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/address_txtV"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/address_val"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/address_eng_icon_imageV_id"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_chevron_right_black_24dp" />
+
+                <TextView
+                    android:id="@+id/address_arb_icon_imageV_id"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_chevron_left_black_24dp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/first_view_id"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_address_layout_id" />
+
+            <RelativeLayout
+                android:id="@+id/profile_payment_layout_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/first_view_id">
+
+                <TextView
+                    android:id="@+id/payment_txtV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/payment_method"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/payment_val_txtV_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/payment_txtV"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/payment_val"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/payment_eng_icon_imageV_id"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_chevron_right_black_24dp" />
+
+                <TextView
+                    android:id="@+id/payment_arb_icon_imageV_id"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_chevron_left_black_24dp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/second_view_id"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_payment_layout_id" />
+
+            <RelativeLayout
+                android:id="@+id/profile_password_layout_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/second_view_id">
+
+                <TextView
+                    android:id="@+id/password_txtV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/prof_password"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/password_val_txtV_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/password_txtV"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/pass_val"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/password_eng_icon_imageV_id"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_chevron_right_black_24dp" />
+
+                <TextView
+                    android:id="@+id/password_arb_icon_imageV_id"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_chevron_left_black_24dp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/third_view_id"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_password_layout_id" />
+
+            <RelativeLayout
+                android:id="@+id/profile_email_layout_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/third_view_id">
+
+                <TextView
+                    android:id="@+id/emailActivation_txtV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/emailActivation_val_txtV_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/emailActivation_txtV"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toLeftOf="@id/activate_btn_id"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textSize="14sp" />
+
+                <android.support.design.button.MaterialButton
+                    android:id="@+id/activate_btn_id"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
         </android.support.constraint.ConstraintLayout>
 
-    </android.support.v7.widget.CardView>
-
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_two"
-        android:layout_width="317dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_one">
-
-        <android.support.constraint.ConstraintLayout
-            android:id="@+id/con2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingLeft="10dp"
-            android:paddingTop="9dp"
-            android:paddingStart="10dp">
-
-            <TextView
-                android:id="@+id/payment_method"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="12dp"
-                android:layout_marginRight="12dp"
-                android:layout_marginTop="10dp"
-                android:text="@string/payment_method"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="@id/con" />
-
-            <TextView
-                android:id="@+id/credit_card"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="3dp"
-                android:layout_marginTop="4dp"
-                android:hint="Credit Card"
-                android:textSize="17sp"
-                app:layout_constraintStart_toStartOf="@id/con2"
-                app:layout_constraintTop_toBottomOf="@+id/payment_method" />
-
-            <ImageButton
-                android:id="@+id/icon_two"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="30dp"
-                android:padding="1dp"
-                android:src="@drawable/side_arrow"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </android.support.constraint.ConstraintLayout>
-
-    </android.support.v7.widget.CardView>
-
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_three"
-        android:layout_width="317dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_two">
-
-        <android.support.constraint.ConstraintLayout
-            android:id="@+id/con3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="9dp"
-            android:paddingLeft="10dp"
-            android:paddingStart="10dp">
-
-            <TextView
-                android:id="@+id/password"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="12dp"
-                android:layout_marginRight="12dp"
-                android:layout_marginTop="10dp"
-                android:text="@string/password_2"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="@id/con" />
-
-            <TextView
-                android:id="@+id/password_shape"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="3dp"
-                android:layout_marginTop="4dp"
-                android:hint="************"
-                android:textSize="17sp"
-                app:layout_constraintStart_toStartOf="@id/con3"
-                app:layout_constraintTop_toBottomOf="@+id/password" />
-
-            <ImageButton
-                android:id="@+id/icon_three"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="30dp"
-                android:padding="1dp"
-                android:src="@drawable/side_arrow"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </android.support.constraint.ConstraintLayout>
-
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_four"
-        android:layout_width="317dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_three">
-
-        <android.support.constraint.ConstraintLayout
-            android:id="@+id/con4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingLeft="10dp"
-            android:paddingStart="10dp"
-
-            android:paddingTop="9dp">
-
-            <TextView
-                android:id="@+id/waleet"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="12dp"
-                android:layout_marginRight="12dp"
-                android:layout_marginTop="10dp"
-                android:text="@string/wallet"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="@id/con" />
-
-            <TextView
-                android:id="@+id/amount"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="3dp"
-                android:layout_marginTop="4dp"
-                android:hint="12000$"
-                android:textSize="17sp"
-                app:layout_constraintStart_toStartOf="@id/con4"
-                app:layout_constraintTop_toBottomOf="@+id/waleet" />
-
-            <ImageButton
-                android:id="@+id/icon_four"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="30dp"
-                android:padding="1dp"
-                android:src="@drawable/side_arrow"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </android.support.constraint.ConstraintLayout>
-
-    </android.support.v7.widget.CardView>
+    </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>

@@ -11,4 +11,6 @@
     <color name="black">#000</color>
     <color name="gray">#8e938e</color>
     <color name="bgray">#545454</color>
+    <color name="background">#928F8F</color>
+    <color name="cart_bgRow">#FA315B</color>
 </resources>

@@ -7,7 +7,7 @@
     tools:context=".MenuActivities.Communications.SendSuggestionActivity">
 
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/app_bar"
+        android:id="@+id/sendSuggestion_app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/green"
@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/serviceProvider_toolbar"
+            android:id="@+id/sendSuggestion_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@android:color/transparent">
@@ -32,7 +32,7 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/back_img"
+                android:id="@+id/send_suggestion_back_img"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_gravity="left|center_vertical"
@@ -43,51 +43,49 @@
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
-
     <TextView
+        android:id="@+id/suggestion_txtV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/app_bar"
-        app:layout_constraintTop_toBottomOf="@id/app_bar"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
         android:text="@string/write_suggestion"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
-        android:id="@+id/suggestion"
-        />
-
+        app:layout_constraintStart_toStartOf="@id/sendSuggestion_app_bar"
+        app:layout_constraintTop_toBottomOf="@id/sendSuggestion_app_bar" />
 
     <android.support.design.widget.TextInputLayout
+        android:id="@+id/cancel_order_reason_input"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/cancel_order_reason_input"
-        app:layout_constraintStart_toStartOf="@id/suggestion"
-        app:layout_constraintTop_toBottomOf="@id/suggestion"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="20dp"
         android:layout_marginTop="40dp"
-        >
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/suggestion_txtV"
+        app:layout_constraintTop_toBottomOf="@id/suggestion_txtV">
+
         <EditText
+            android:id="@+id/suggestion_ed_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/suggest_value"/>
+            android:hint="@string/suggest_value"
+            android:inputType="text" />
     </android.support.design.widget.TextInputLayout>
 
 
     <android.support.design.button.MaterialButton
+        android:id="@+id/send_suggestion_btn_id"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/cancel_order_reason_input"
-        app:layout_constraintEnd_toEndOf="@id/cancel_order_reason_input"
-        app:layout_constraintTop_toBottomOf="@id/cancel_order_reason_input"
-        android:text="@string/send"
-        android:textColor="@color/white"
-        android:textAllCaps="false"
         android:layout_marginTop="60dp"
         android:background="@drawable/buttons"
-        android:id="@+id/send_suggestion_btn"
-        />
+        android:text="@string/send"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/cancel_order_reason_input"
+        app:layout_constraintStart_toStartOf="@id/cancel_order_reason_input"
+        app:layout_constraintTop_toBottomOf="@id/cancel_order_reason_input" />
 
 
 </android.support.constraint.ConstraintLayout>

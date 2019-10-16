@@ -44,267 +44,268 @@
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
-
-
     <FrameLayout
+        android:id="@+id/drlivery_date_frame_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/app_bar"
-        app:layout_constraintEnd_toEndOf="@id/app_bar"
-        app:layout_constraintTop_toBottomOf="@+id/app_bar"
-        android:background="@drawable/border"
-        android:id="@+id/frame1_root"
-        android:layout_marginEnd="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:padding="15dp">
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/border"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="@id/app_bar"
+        app:layout_constraintStart_toStartOf="@id/app_bar"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:textStyle="bold"
-            android:textSize="20sp"
+            android:layout_marginBottom="20dp"
             android:text="@string/delivery_date"
             android:textColor="@color/black"
-            android:layout_marginBottom="20dp"
-            />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/delivery_date_value_txV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:layout_marginTop="10dp"
-            android:text="@string/delivery_date_value_txV"
-            android:id="@+id/delivery_date_value_txV"/>
+            android:text="@string/delivery_date_value_txV" />
 
         <ImageView
+            android:id="@+id/delivery_date_en_arrow_img"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="@drawable/side_arrow"
             android:layout_gravity="end|center_vertical"
-            android:id="@+id/delivery_date_arrow_img"/>
+            android:src="@drawable/ic_chevron_right_black_24dp" />
+
+        <ImageView
+            android:id="@+id/delivery_date_ar_arrow_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="end|center_vertical"
+            android:src="@drawable/ic_chevron_left_black_24dp"
+            android:visibility="gone" />
 
     </FrameLayout>
 
-
     <FrameLayout
+        android:id="@+id/paymentMethod_frame_id"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/frame1_root"
-        app:layout_constraintEnd_toEndOf="@id/frame1_root"
-        app:layout_constraintTop_toBottomOf="@+id/frame1_root"
         android:background="@drawable/border"
-        android:id="@+id/frame2_root"
-        android:padding="15dp">
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="@id/drlivery_date_frame_id"
+        app:layout_constraintStart_toStartOf="@id/drlivery_date_frame_id"
+        app:layout_constraintTop_toBottomOf="@+id/drlivery_date_frame_id">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:textStyle="bold"
-            android:textSize="20sp"
+            android:layout_marginBottom="20dp"
             android:text="@string/payment_method"
             android:textColor="@color/black"
-            android:layout_marginBottom="20dp"
-            />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/payment_method_value_txtV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:layout_marginTop="10dp"
-            android:id="@+id/payment_method_value_txtV"
-            android:text="@string/payment_method_value"/>
+            android:text="@string/payment_method" />
 
         <ImageView
+            android:id="@+id/payment_method_en_arrow_img"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="@drawable/side_arrow"
             android:layout_gravity="end|center_vertical"
-            android:id="@+id/payment_method_arrow_img"/>
+            android:src="@drawable/ic_chevron_right_black_24dp" />
+
+        <ImageView
+            android:id="@+id/payment_method_ar_arrow_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="end|center_vertical"
+            android:src="@drawable/ic_chevron_left_black_24dp"
+            android:visibility="gone" />
 
     </FrameLayout>
 
     <TextView
+        android:id="@+id/order"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/frame2_root"
-        app:layout_constraintStart_toStartOf="@id/frame2_root"
-        android:textSize="20dp"
-        android:text="@string/order"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
+        android:text="@string/order"
         android:textColor="@color/black"
-        android:id="@+id/order"/>
-
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/paymentMethod_frame_id"
+        app:layout_constraintTop_toBottomOf="@id/paymentMethod_frame_id" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_order"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/app_bar"
-        app:layout_constraintTop_toBottomOf="@+id/order"
-        app:layout_constraintEnd_toEndOf="@id/app_bar"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="20dp"
         app:layout_constraintBottom_toTopOf="@+id/price_value_txV"
-        android:layout_marginTop="15dp"/>
-
+        app:layout_constraintEnd_toEndOf="@id/app_bar"
+        app:layout_constraintStart_toStartOf="@id/app_bar"
+        app:layout_constraintTop_toBottomOf="@+id/order" />
 
 
     <TextView
+        android:id="@+id/price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/recycler_order"
-        app:layout_constraintStart_toStartOf="@id/recycler_order"
-        android:text="@string/price"
         android:layout_marginTop="10dp"
-        android:id="@+id/price"/>
-
+        android:text="@string/price"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/recycler_order"
+        app:layout_constraintTop_toBottomOf="@id/recycler_order" />
 
     <TextView
+        android:id="@+id/price_value_txV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/recycler_order"
-        app:layout_constraintEnd_toEndOf="@id/recycler_order"
+        android:layout_marginTop="10dp"
         android:text="@string/item_price"
         android:textColor="@color/bgreen"
-        android:layout_marginTop="10dp"
-        android:id="@+id/price_value_txV"/>
-
-
-
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/recycler_order"
-        app:layout_constraintTop_toBottomOf="@id/price"
-        android:text="@string/delivery_free"
-        android:layout_marginTop="5dp"
-        android:id="@+id/delivery_free"/>
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/recycler_order"
-        app:layout_constraintTop_toBottomOf="@id/price"
-        android:text="@string/delivery_free_value"
-        android:layout_marginTop="5dp"
-        android:id="@+id/delivery_free_value_txV"
-        android:textColor="@color/bgreen"/>
+        app:layout_constraintTop_toBottomOf="@id/recycler_order" />
 
+    <TextView
+        android:id="@+id/delivery_free"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/delivery_free"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/recycler_order"
+        app:layout_constraintTop_toBottomOf="@id/price" />
+
+    <TextView
+        android:id="@+id/delivery_free_value_txV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/delivery_free_value"
+        android:textColor="@color/bgreen"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/recycler_order"
+        app:layout_constraintTop_toBottomOf="@id/price" />
 
     <ImageView
-        android:layout_marginTop="5dp"
+        android:id="@+id/add_discount_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:src="@drawable/add_discount"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="@id/recycler_order"
-        app:layout_constraintTop_toBottomOf="@id/delivery_free"
-        android:id="@+id/add_discount_img"/>
+        app:layout_constraintTop_toBottomOf="@id/delivery_free" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/delivery_free"
+        android:layout_marginStart="10dp"
         android:text="@string/add_discount_code"
-       app:layout_constraintTop_toTopOf="@id/add_discount_img"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@id/add_discount_img"
         app:layout_constraintStart_toEndOf="@id/add_discount_img"
-        android:layout_marginStart="10dp"
-        />
+        app:layout_constraintTop_toBottomOf="@id/delivery_free"
+        app:layout_constraintTop_toTopOf="@id/add_discount_img" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/add_discount_img"
-        app:layout_constraintStart_toStartOf="@id/recycler_order"
-        android:text="@string/discount"
         android:id="@+id/discount"
-        android:layout_marginTop="5dp"
-        />
-
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/add_discount_img"
-        app:layout_constraintEnd_toEndOf="@id/recycler_order"
-        android:text="@string/discount_value"
-        android:id="@+id/discount_value_txtV"
         android:layout_marginTop="5dp"
+        android:text="@string/discount"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/recycler_order"
+        app:layout_constraintTop_toBottomOf="@id/add_discount_img" />
+
+    <TextView
+        android:id="@+id/discount_value_txtV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/discount_value"
         android:textColor="@color/bgreen"
-        />
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/recycler_order"
+        app:layout_constraintTop_toBottomOf="@id/add_discount_img" />
 
     <View
+        android:id="@+id/view"
         android:layout_width="0dp"
         android:layout_height="2dp"
+        android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
-        android:layout_marginTop="15dp"
         android:background="@color/green"
-        app:layout_constraintEnd_toEndOf="@id/recycler_order"
-        app:layout_constraintStart_toStartOf="@id/recycler_order"
-        app:layout_constraintTop_toBottomOf="@+id/discount"
         app:layout_constraintBottom_toTopOf="@+id/total_price"
-        android:id="@+id/view"/>
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/view"
-        app:layout_constraintStart_toStartOf="@id/recycler_order"
-        android:text="@string/total_price"
-        android:id="@+id/total_price"
-        android:layout_marginTop="15dp"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/view"
         app:layout_constraintEnd_toEndOf="@id/recycler_order"
-        android:text="@string/total_price_value"
-        android:id="@+id/total_price_value_txtV"
-        android:layout_marginTop="15dp"
-        android:textColor="@color/bgreen"
-        />
+        app:layout_constraintStart_toStartOf="@id/recycler_order"
+        app:layout_constraintTop_toBottomOf="@+id/discount" />
 
+    <TextView
+        android:id="@+id/total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/total_price"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/recycler_order"
+        app:layout_constraintTop_toBottomOf="@id/view" />
+
+    <TextView
+        android:id="@+id/total_price_value_txtV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/total_price_value"
+        android:textColor="@color/bgreen"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/recycler_order"
+        app:layout_constraintTop_toBottomOf="@id/view" />
 
     <Button
+        android:id="@+id/confirm_order_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/recycler_order"
-        app:layout_constraintEnd_toEndOf="@id/recycler_order"
-        app:layout_constraintTop_toBottomOf="@id/total_price"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:background="@drawable/buttons"
-        android:textColor="@color/white"
-        android:textAllCaps="false"
-        android:text="@string/confirm_order"
-        android:layout_marginBottom="10dp"
         android:layout_marginTop="15dp"
-        android:id="@+id/confirm_order_btn"
-        />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/buttons"
+        android:text="@string/confirm_order"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/recycler_order"
+        app:layout_constraintStart_toStartOf="@id/recycler_order"
+        app:layout_constraintTop_toBottomOf="@id/total_price" />
 </android.support.constraint.ConstraintLayout>

@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.khaled_sa2r.tomatoo">
+    package="com.tomatoo">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <!--
-         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-         Google Maps Android API v2, but you must specify either coarse or fine
-         location permissions for the 'MyLocation' functionality.
-    -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -21,19 +16,46 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Main.SplashActivity">
+        <activity
+            android:name="com.tomatoo.Main.CategoryDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tomatoo.MenuActivities.Orders.OrderDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tomatoo.Main.SplashActivity"
+            android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".LogainAndRegistration.LoginActivity" />
-        <activity android:name=".LogainAndRegistration.RegistrationActivity" />
-        <activity android:name=".PasswordReset.ForgetPasswordActivity" />
-        <activity android:name=".PasswordReset.VerificationCodeActivity" />
-        <activity android:name=".PasswordReset.ResetPasswordActivity" />
-        <activity android:name=".Location.LocationActivity" />
+        <activity
+            android:name="com.tomatoo.LogainAndRegistration.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.tomatoo.LogainAndRegistration.RegistrationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.tomatoo.PasswordReset.ForgetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tomatoo.PasswordReset.VerificationCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tomatoo.PasswordReset.ResetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tomatoo.Location.LocationActivity"
+            android:screenOrientation="portrait" >
+
+
+        </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -49,10 +71,15 @@
         <activity android:name=".PasswordReset.VerifyCodeAfterRegistrateActivity" />
         <activity
             android:name=".Main.MainPageActivity"
-            android:label="@string/title_activity_main_page"
-            android:theme="@style/AppTheme" />
-        <activity android:name=".MenuActivities.Profile.ProfileActivity" />
-        <activity android:name=".Main.CategoriesTabs.CategoriesActivity">
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuActivities.Profile.ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Main.CategoriesTabs.CategoriesActivity"
+            android:screenOrientation="portrait">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -61,42 +88,88 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".Main.CategoriesItems.CategoryItemDetailsActivity" />
-        <activity android:name=".Main.CategoriesItems.ShoppingCartActivity" />
-        <activity android:name=".Main.CategoriesItems.CheckoutActivity" />
-        <activity android:name=".Main.CategoriesItems.Checkout2Activity" />
-        <activity android:name=".Main.CategoriesItems.DoneOrderActivity" />
-        <activity android:name=".Main.CategoriesItems.PaymentMethodActivity" />
-        <activity android:name=".Main.CategoriesItems.MyWalletActivity" />
-        <activity android:name=".MenuActivities.Notifications.NotificationsActivity" />
-        <activity android:name=".MenuActivities.Orders.MyOrderActivity" />
-        <activity android:name=".MenuActivities.Orders.PROCESS.MyOrderProcessDetailsActivity" />
-        <activity android:name=".MenuActivities.Orders.ONWAY.MyOrderOnWayDetailsActivity" />
-        <activity android:name=".MenuActivities.Orders.COMPELETED.MyOderCompletedDetailsActivity" />
-        <activity android:name=".MenuActivities.Orders.CancelOrderActivity" />
-        <activity android:name=".MenuActivities.Orders.AddReview1Activity" />
-        <activity android:name=".MenuActivities.Communications.ContactUsActivity" />
-        <activity android:name=".MenuActivities.Communications.SendSuggestionActivity" />
-        <activity android:name=".MenuActivities.Communications.ReportProblemActivity" />
-        <activity android:name=".MenuActivities.Profile.ChangePasswordActivity" />
-        <activity android:name=".MenuActivities.Profile.EditProfileActivity" />
-        <activity android:name=".MenuActivities.Profile.EditPaymentMethodActivity" />
-        <activity android:name=".MenuActivities.Profile.AddressActivity" />
-        <activity android:name=".MenuActivities.Profile.RechargeWalletActivity" />
-        <activity android:name=".MenuActivities.Settings.SettingActivity" />
-        <activity android:name=".MenuActivities.Profile.WalletActivity" />
-        <activity android:name=".MenuActivities.Communications.AboutUsActivity" />
-        <activity android:name=".MenuActivities.Communications.HowToUseActivity" />
+        <activity
+            android:name=".Main.CategoriesItems.ItemDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Main.CategoriesItems.ShoppingCartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Main.CategoriesItems.CheckoutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Main.CategoriesItems.Checkout2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Main.CategoriesItems.DoneOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Main.CategoriesItems.PaymentMethodActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Main.CategoriesItems.MyWalletActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuActivities.Notifications.NotificationsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuActivities.Orders.MyOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuActivities.Orders.CancelOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuActivities.Orders.AddReview1Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuActivities.Communications.ContactUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuActivities.Communications.SendSuggestionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuActivities.Communications.ReportProblemActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuActivities.Profile.ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuActivities.Profile.EditProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuActivities.Profile.EditPaymentMethodActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuActivities.Profile.AddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuActivities.Profile.RechargeWalletActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuActivities.Settings.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuActivities.Profile.WalletActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuActivities.Communications.AboutUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuActivities.Communications.HowToUseActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Location.SetLocationActivity"
             android:label="@string/title_activity_set_location" />
         <activity
             android:name=".Main.CategoriesItems.DeliveryAddressActivity"
-            android:label="@string/title_activity_delivery_address" />
-        <activity android:name=".MenuActivities.WishList.MyWishListActivity" />
-        <activity android:name=".MenuActivities.CompareList.MyCompareListActivity" />
-        <activity android:name=".Main.MainActivity" />
-        <activity android:name=".MyCompareListActivity"></activity>
+            android:label="@string/title_activity_delivery_address"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuActivities.WishList.MyWishListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuActivities.CompareList.MyCompareListActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
